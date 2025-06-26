@@ -35,6 +35,7 @@ mvc-flask-app/
 ▶️ Ejecución
 
 ```bash
+pip install flask
 python app.py
 ```
 Abre tu navegador en http://localhost:5000
