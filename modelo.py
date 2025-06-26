@@ -13,3 +13,6 @@ def guardar_producto(producto):
 
 def obtener_productos():
     return productos
+
+def borrar_productos():
+    productos.clear()

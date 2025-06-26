@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from modelo import Producto, guardar_producto, obtener_productos
+from modelo import borrar_productos
 
 app = Flask(__name__)
 
@@ -22,6 +23,13 @@ def agregar_producto():
 def listar_productos():
     productos = obtener_productos()
     return render_template("lista.html", productos=productos)
+
+
+@app.route("/borrar")
+def borrar():
+    borrar_productos()
+    return redirect(url_for("listar_productos"))
+
 
 if __name__ == "__main__":
     app.run(debug=True)
